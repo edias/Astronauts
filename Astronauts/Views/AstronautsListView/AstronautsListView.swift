@@ -17,12 +17,10 @@ struct AstronautsListView: View {
         NavigationView {
             
             VStack {
-                
                 ScrollView {
                     ForEach(viewModel.astronauts, id: \.self) { astronaut in
                         AstronautRollView(astronaut)
-                    }
-                    .listStyle(GroupedListStyle())
+                    }.listStyle(GroupedListStyle())
                 }
             }.navigationTitle("Astronauts")
         }
