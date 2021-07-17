@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Astronaut: Codable {
+struct Astronaut: Codable, Hashable {
     let name: String
     let nationality: String
     let profileImageThumbnail: URL
