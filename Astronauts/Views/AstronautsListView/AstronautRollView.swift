@@ -18,14 +18,20 @@ struct AstronautRollView: View {
     var body: some View {
         
         HStack {
+            
             ThumbnailView(astronaut.profileImageThumbnail)
-                .frame(width: 80, height: 80)
+                .frame(width: 50, height: 50)
+                .padding(.leading, 10)
+                .padding(.trailing, 2)
+                .padding(.vertical, 5)
+            
             VStack (alignment: .leading){
                 Text(astronaut.name)
                     .font(.callout)
                 Text(astronaut.nationality)
                     .font(.caption)
             }
+            
             Spacer()
         }
     }

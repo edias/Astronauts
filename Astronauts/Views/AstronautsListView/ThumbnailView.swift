@@ -24,6 +24,12 @@ struct ThumbnailView: View {
         Image(uiImage: uiImage)
             .resizable()
             .aspectRatio(1, contentMode: .fit)
+            .clipShape(Circle())
+            .padding(2)
+            .overlay(
+                Circle()
+                    .stroke(Color.blue)
+            )
             .onReceive(imageLoader.$image) { image in
                 guard let image = image else { return }
                 self.uiImage = image
@@ -31,8 +37,8 @@ struct ThumbnailView: View {
     }
 }
 
-//struct ThumbnailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ThumbnailView()
-//    }
-//}
+struct ThumbnailView_Previews: PreviewProvider {
+    static var previews: some View {
+        ThumbnailView("")
+    }
+}
