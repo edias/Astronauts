@@ -18,8 +18,7 @@ struct AstronautRollView: View {
     var body: some View {
         
         HStack {
-            Image("")
-                .resizable()
+            ThumbnailView(astronaut.profileImageThumbnail)
                 .frame(width: 80, height: 80)
             VStack (alignment: .leading){
                 Text(astronaut.name)
@@ -34,7 +33,7 @@ struct AstronautRollView: View {
 
 struct AstronautRollView_Previews: PreviewProvider {
     
-    private static var astronaut = Astronaut(name: "Joe", nationality: "AUS", profileImageThumbnail: URL(string: "")!)
+    private static var astronaut = Astronaut(name: "Joe", nationality: "AUS", profileImageThumbnail: "")
     
     static var previews: some View {
         Group {

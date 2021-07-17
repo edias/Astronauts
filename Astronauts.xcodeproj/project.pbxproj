@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F822EB2F26A25D2A00F29E78 /* AstronautsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB2E26A25D2A00F29E78 /* AstronautsListViewModel.swift */; };
 		F822EB3226A269C400F29E78 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3126A269C400F29E78 /* Environments.swift */; };
+		F822EB3526A2733200F29E78 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3426A2733200F29E78 /* ImageLoader.swift */; };
+		F822EB3726A2755900F29E78 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3626A2755900F29E78 /* ThumbnailView.swift */; };
 		F8E0D56A26A1B7080015E13D /* AstronautsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56926A1B7080015E13D /* AstronautsApp.swift */; };
 		F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */; };
 		F8E0D56E26A1B7090015E13D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D56D26A1B7090015E13D /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		F822EB2E26A25D2A00F29E78 /* AstronautsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsListViewModel.swift; sourceTree = "<group>"; };
 		F822EB3126A269C400F29E78 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
+		F822EB3426A2733200F29E78 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F822EB3626A2755900F29E78 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		F8E0D56626A1B7080015E13D /* Astronauts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronauts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D56926A1B7080015E13D /* AstronautsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsApp.swift; sourceTree = "<group>"; };
 		F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsListView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */,
 				F8F932EE26A2559D006957FD /* AstronautRollView.swift */,
 				F822EB2E26A25D2A00F29E78 /* AstronautsListViewModel.swift */,
+				F822EB3626A2755900F29E78 /* ThumbnailView.swift */,
 			);
 			path = AstronautsListView;
 			sourceTree = "<group>";
@@ -92,6 +97,14 @@
 				F822EB3126A269C400F29E78 /* Environments.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F822EB3326A2731E00F29E78 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F822EB3426A2733200F29E78 /* ImageLoader.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F8E0D55D26A1B7080015E13D = {
@@ -145,6 +158,7 @@
 		F8F932E026A1BA4B006957FD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F822EB3326A2731E00F29E78 /* Utils */,
 				F8F932EB26A1BB52006957FD /* Services */,
 				F8F932E826A1BAB2006957FD /* DataModels */,
 				F8F932E126A1BA52006957FD /* Base */,
@@ -282,9 +296,11 @@
 				F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */,
 				F822EB3226A269C400F29E78 /* Environments.swift in Sources */,
 				F822EB2F26A25D2A00F29E78 /* AstronautsListViewModel.swift in Sources */,
+				F822EB3526A2733200F29E78 /* ImageLoader.swift in Sources */,
 				F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */,
 				F8F932EA26A1BAEA006957FD /* Astronaut.swift in Sources */,
 				F8E0D56A26A1B7080015E13D /* AstronautsApp.swift in Sources */,
+				F822EB3726A2755900F29E78 /* ThumbnailView.swift in Sources */,
 				F8F932E726A1BA75006957FD /* Serializer.swift in Sources */,
 				F8F932EF26A2559D006957FD /* AstronautRollView.swift in Sources */,
 			);

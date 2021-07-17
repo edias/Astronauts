@@ -26,24 +26,43 @@ enum NetworkServiceError: Error {
 
 protocol NetworkServices {
     var restClient: RestClient { get }
-    func get<T: Decodable>(url: String) -> AnyPublisher<T, Error>
+    func get<T: Decodable>(urlString: String) -> AnyPublisher<T, Error>
+    func get(imageUrlString: String) -> AnyPublisher<Data, Error>
 }
 
 extension NetworkServices {
     
-    func get<T: Decodable>(url: String) -> AnyPublisher<T, Error> {
+    func get<T: Decodable>(urlString: String) -> AnyPublisher<T, Error> {
         
-        guard let url = URL(string: url) else {
+        guard let request = makeURLRequest(urlString) else {
             return Fail<T, Error>(error: NetworkServiceError.invalidURL).eraseToAnyPublisher()
         }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
+                
         return restClient.performRequest(request)
                    .tryMap { output in try NetworkStatusHandler.handleOutput(output).data }
                    .tryMap { output in try Serializer.shared.deserialize(T.self, data: output) }
                    .eraseToAnyPublisher()
+    }
+    
+    func get(imageUrlString: String) -> AnyPublisher<Data, Error> {
+        
+        guard let request = makeURLRequest(imageUrlString) else {
+            return Fail<Data, Error>(error: NetworkServiceError.invalidURL).eraseToAnyPublisher()
+        }
+                
+        return restClient.performRequest(request)
+            .tryMap { output in output.data  }
+            .eraseToAnyPublisher()
+    }
+    
+    private func makeURLRequest(_ urlString: String) -> URLRequest? {
+        
+        guard let url = URL(string: urlString) else { return nil }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        return request
     }
 }
 

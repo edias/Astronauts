@@ -10,7 +10,7 @@ import Foundation
 struct Astronaut: Codable, Hashable {
     let name: String
     let nationality: String
-    let profileImageThumbnail: URL
+    let profileImageThumbnail: String
 }
 
 struct AstronautsResult: Codable {
