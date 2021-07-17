@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F822EB2F26A25D2A00F29E78 /* AstronautsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB2E26A25D2A00F29E78 /* AstronautsListViewModel.swift */; };
+		F822EB3226A269C400F29E78 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3126A269C400F29E78 /* Environments.swift */; };
 		F8E0D56A26A1B7080015E13D /* AstronautsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56926A1B7080015E13D /* AstronautsApp.swift */; };
 		F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */; };
 		F8E0D56E26A1B7090015E13D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D56D26A1B7090015E13D /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		F822EB2E26A25D2A00F29E78 /* AstronautsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsListViewModel.swift; sourceTree = "<group>"; };
+		F822EB3126A269C400F29E78 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		F8E0D56626A1B7080015E13D /* Astronauts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronauts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D56926A1B7080015E13D /* AstronautsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsApp.swift; sourceTree = "<group>"; };
 		F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsListView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = AstronautsListView;
 			sourceTree = "<group>";
 		};
+		F822EB3026A269B500F29E78 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F822EB3126A269C400F29E78 /* Environments.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		F8E0D55D26A1B7080015E13D = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		F8E0D56826A1B7080015E13D /* Astronauts */ = {
 			isa = PBXGroup;
 			children = (
+				F822EB3026A269B500F29E78 /* Settings */,
 				F822EB2C26A25BF400F29E78 /* Views */,
 				F8F932E026A1BA4B006957FD /* Network */,
 				F8E0D56926A1B7080015E13D /* AstronautsApp.swift */,
@@ -269,6 +280,7 @@
 				F8F932ED26A1BB63006957FD /* AstronautsNetworkServices.swift in Sources */,
 				F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */,
 				F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */,
+				F822EB3226A269C400F29E78 /* Environments.swift in Sources */,
 				F822EB2F26A25D2A00F29E78 /* AstronautsListViewModel.swift in Sources */,
 				F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */,
 				F8F932EA26A1BAEA006957FD /* Astronaut.swift in Sources */,

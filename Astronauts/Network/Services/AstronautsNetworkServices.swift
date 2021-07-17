@@ -23,15 +23,3 @@ class AstronautsNetworkServices: BaseNetworkServices, AustronautsFetcher {
         }.eraseToAnyPublisher()
     }
 }
-
-
-struct Environment {
-    
-    enum URLS: String {
-        case base = "https://spacelaunchnow.me"
-    }
-}
-
-extension Environment.URLS: CustomStringConvertible {
-    var description: String { rawValue }
-}
