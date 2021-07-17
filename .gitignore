@@ -29,3 +29,4 @@ playground.xcworkspace
 *.xcworkspace
 
 .DS_Store
+*.xcuserstate
