@@ -23,7 +23,7 @@ struct AstronautRollView: View {
                 .frame(width: 50, height: 50)
                 .padding(.leading, 10)
                 .padding(.trailing, 2)
-                .padding(.vertical, 5)
+                .padding(.vertical, 8)
             
             VStack (alignment: .leading){
                 Text(astronaut.name)
