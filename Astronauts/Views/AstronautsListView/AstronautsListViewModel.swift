@@ -23,7 +23,7 @@ class AstronautsListViewModel: ObservableObject {
         self.astronautsFetcher = astronautsFetcher
     }
     
-    func loadAstronaults() {
+    func loadAstronauts() {
         
         astronautsFetcher.fetchAustronauts().receive(on: RunLoop.main).sink { _ in }
             receiveValue: { [weak self] astronauts in

@@ -24,7 +24,7 @@ struct AstronautsListView: View {
                 }
             }.navigationTitle("Astronauts")
         }
-        .onAppear { viewModel.loadAstronaults() }
+        .onAppear { viewModel.loadAstronauts() }
     }
 }
 
