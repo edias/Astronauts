@@ -19,7 +19,7 @@ class AstronautsListViewModel: ObservableObject {
     
     private var astronautsFetcher: AustronautsFetcher
     
-    init(_ astronautsFetcher: AustronautsFetcher = AstronautNetworkServices()) {
+    init(_ astronautsFetcher: AustronautsFetcher = AstronautsNetworkServices()) {
         self.astronautsFetcher = astronautsFetcher
     }
     

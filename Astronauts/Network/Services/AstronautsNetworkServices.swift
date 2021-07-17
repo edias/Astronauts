@@ -12,7 +12,7 @@ protocol AustronautsFetcher {
     func fetchAustronauts() -> AnyPublisher<[Astronaut], Error>
 }
 
-class AstronautNetworkServices: BaseNetworkServices, AustronautsFetcher {
+class AstronautsNetworkServices: BaseNetworkServices, AustronautsFetcher {
     
     func fetchAustronauts() -> AnyPublisher<[Astronaut], Error> {
         

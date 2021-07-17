@@ -16,7 +16,7 @@
 		F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */; };
 		F8F932E726A1BA75006957FD /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E426A1BA75006957FD /* Serializer.swift */; };
 		F8F932EA26A1BAEA006957FD /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E926A1BAEA006957FD /* Astronaut.swift */; };
-		F8F932ED26A1BB63006957FD /* AstronautNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932EC26A1BB63006957FD /* AstronautNetworkServices.swift */; };
+		F8F932ED26A1BB63006957FD /* AstronautsNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932EC26A1BB63006957FD /* AstronautsNetworkServices.swift */; };
 		F8F932EF26A2559D006957FD /* AstronautRollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932EE26A2559D006957FD /* AstronautRollView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandler.swift; sourceTree = "<group>"; };
 		F8F932E426A1BA75006957FD /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		F8F932E926A1BAEA006957FD /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
-		F8F932EC26A1BB63006957FD /* AstronautNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautNetworkServices.swift; sourceTree = "<group>"; };
+		F8F932EC26A1BB63006957FD /* AstronautsNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsNetworkServices.swift; sourceTree = "<group>"; };
 		F8F932EE26A2559D006957FD /* AstronautRollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautRollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,7 +162,7 @@
 		F8F932EB26A1BB52006957FD /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F8F932EC26A1BB63006957FD /* AstronautNetworkServices.swift */,
+				F8F932EC26A1BB63006957FD /* AstronautsNetworkServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8F932ED26A1BB63006957FD /* AstronautNetworkServices.swift in Sources */,
+				F8F932ED26A1BB63006957FD /* AstronautsNetworkServices.swift in Sources */,
 				F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */,
 				F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */,
 				F822EB2F26A25D2A00F29E78 /* AstronautsListViewModel.swift in Sources */,
