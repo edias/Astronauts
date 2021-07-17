@@ -28,7 +28,11 @@ struct ThumbnailView: View {
             .padding(3)
             .overlay(
                 Circle()
-                    .stroke(Color.random(), lineWidth: 1.5)
+                    .stroke(
+                        LinearGradient(gradient:
+                                        Gradient(colors: Color.randomGradient),
+                                       startPoint: .leading, endPoint: .trailing),
+                        lineWidth: 2)
             )
             .onReceive(imageLoader.$image) { image in
                 guard let image = image else { return }
