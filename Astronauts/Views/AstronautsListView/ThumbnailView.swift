@@ -25,10 +25,10 @@ struct ThumbnailView: View {
             .resizable()
             .aspectRatio(1, contentMode: .fit)
             .clipShape(Circle())
-            .padding(2)
+            .padding(3)
             .overlay(
                 Circle()
-                    .stroke(Color.blue)
+                    .stroke(Color.random(), lineWidth: 1.5)
             )
             .onReceive(imageLoader.$image) { image in
                 guard let image = image else { return }
