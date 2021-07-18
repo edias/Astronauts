@@ -31,6 +31,8 @@
 		F8E0D56E26A1B7090015E13D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D56D26A1B7090015E13D /* Assets.xcassets */; };
 		F8E0D57126A1B7090015E13D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D57026A1B7090015E13D /* Preview Assets.xcassets */; };
 		F8E77B5626A44EB600B88862 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5526A44EB600B88862 /* ColorPalette.swift */; };
+		F8E77B5826A44FE800B88862 /* SerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5726A44FE800B88862 /* SerializerTests.swift */; };
+		F8E77B5A26A4501C00B88862 /* NetworkStatusHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5926A4501C00B88862 /* NetworkStatusHandlerTests.swift */; };
 		F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E226A1BA75006957FD /* NetworkServices.swift */; };
 		F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */; };
 		F8F932E726A1BA75006957FD /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E426A1BA75006957FD /* Serializer.swift */; };
@@ -78,6 +80,8 @@
 		F8E0D57726A1B7090015E13D /* AstronautsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstronautsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D57D26A1B7090015E13D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8E77B5526A44EB600B88862 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		F8E77B5726A44FE800B88862 /* SerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerTests.swift; sourceTree = "<group>"; };
+		F8E77B5926A4501C00B88862 /* NetworkStatusHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandlerTests.swift; sourceTree = "<group>"; };
 		F8F932E226A1BA75006957FD /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandler.swift; sourceTree = "<group>"; };
 		F8F932E426A1BA75006957FD /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				F8E0D57D26A1B7090015E13D /* Info.plist */,
+				F8E77B5726A44FE800B88862 /* SerializerTests.swift */,
+				F8E77B5926A4501C00B88862 /* NetworkStatusHandlerTests.swift */,
 			);
 			path = AstronautsTests;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 					};
 					F8E0D57626A1B7090015E13D = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = F8E0D56526A1B7080015E13D;
 					};
 				};
@@ -430,6 +437,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E77B5826A44FE800B88862 /* SerializerTests.swift in Sources */,
+				F8E77B5A26A4501C00B88862 /* NetworkStatusHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +618,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DW4ZNXNDJB;
 				INFOPLIST_FILE = AstronautsTests/Info.plist;
@@ -620,6 +630,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = immersia.com.au.AstronautsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Astronauts.app/Astronauts";
@@ -631,6 +642,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DW4ZNXNDJB;
 				INFOPLIST_FILE = AstronautsTests/Info.plist;
