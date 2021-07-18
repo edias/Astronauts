@@ -11,7 +11,7 @@ struct AstronautDetailsGridCellDivider: View {
     var body: some View {
         Rectangle()
             .foregroundColor(ColorPalette.secondaryColor)
-            .frame(width: 1, height: 50)
+            .frame(width: 1, height: 60)
     }
 }
 
