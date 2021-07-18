@@ -68,6 +68,18 @@ class NetworkStatusHandlerTests: XCTestCase {
         }
     }
     
+    func test_outputThrowsAfterReachingLimitRequestsRate() throws {
+        
+        let response = HTTPURLResponse(url: URL(string: "https://www.google.com")!, statusCode: 429, httpVersion: "1.0", headerFields: [:])!
+        let output = (data: Data("test".utf8), response: response)
+        
+        do {
+            let _ = try NetworkStatusHandler.handleOutput(output)
+        } catch let error as StatusCodeError {
+            XCTAssertEqual(error, StatusCodeError.tooManyRequests)
+        }
+    }
+    
     func test_outputThrowsWithInternalServerError() throws {
         let response = HTTPURLResponse(url: URL(string: "https://www.google.com")!, statusCode: 500, httpVersion: "1.0", headerFields: [:])!
         let output = (data: Data("test".utf8), response: response)
