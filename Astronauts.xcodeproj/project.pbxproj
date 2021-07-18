@@ -18,7 +18,7 @@
 		F822EB4426A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4326A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift */; };
 		F822EB4826A3DDC000F29E78 /* AstronautDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4726A3DDC000F29E78 /* AstronautDetails.swift */; };
 		F822EB4B26A3DF3400F29E78 /* AstronautDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4A26A3DF3400F29E78 /* AstronautDetailsViewModel.swift */; };
-		F86BD3AB26A3F85E000F744C /* AstronaultDetailsViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86BD3AA26A3F85E000F744C /* AstronaultDetailsViewmodel.swift */; };
+		F86BD3AB26A3F85E000F744C /* AstronautDetailsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86BD3AA26A3F85E000F744C /* AstronautDetailsDataModel.swift */; };
 		F8AC20D826A4135100117FAE /* SortingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AC20D726A4135100117FAE /* SortingButton.swift */; };
 		F8AC20DB26A4173C00117FAE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AC20DA26A4173C00117FAE /* ErrorView.swift */; };
 		F8AC20DD26A417A200117FAE /* Error+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AC20DC26A417A200117FAE /* Error+View.swift */; };
@@ -57,7 +57,7 @@
 		F822EB4326A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsGridCellDivider.swift; sourceTree = "<group>"; };
 		F822EB4726A3DDC000F29E78 /* AstronautDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetails.swift; sourceTree = "<group>"; };
 		F822EB4A26A3DF3400F29E78 /* AstronautDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewModel.swift; sourceTree = "<group>"; };
-		F86BD3AA26A3F85E000F744C /* AstronaultDetailsViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronaultDetailsViewmodel.swift; sourceTree = "<group>"; };
+		F86BD3AA26A3F85E000F744C /* AstronautDetailsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsDataModel.swift; sourceTree = "<group>"; };
 		F8AC20D726A4135100117FAE /* SortingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingButton.swift; sourceTree = "<group>"; };
 		F8AC20DA26A4173C00117FAE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		F8AC20DC26A417A200117FAE /* Error+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+View.swift"; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		F86BD3A926A3F846000F744C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F86BD3AA26A3F85E000F744C /* AstronaultDetailsViewmodel.swift */,
+				F86BD3AA26A3F85E000F744C /* AstronautDetailsDataModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -387,7 +387,7 @@
 				F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */,
 				F8F932EA26A1BAEA006957FD /* Astronaut.swift in Sources */,
 				F822EB3F26A2F38700F29E78 /* AstronautDetailsGridView.swift in Sources */,
-				F86BD3AB26A3F85E000F744C /* AstronaultDetailsViewmodel.swift in Sources */,
+				F86BD3AB26A3F85E000F744C /* AstronautDetailsDataModel.swift in Sources */,
 				F822EB4226A2F46500F29E78 /* AstronautDetailsGridCellView.swift in Sources */,
 				F8E0D56A26A1B7080015E13D /* AstronautsApp.swift in Sources */,
 				F822EB3726A2755900F29E78 /* ThumbnailView.swift in Sources */,
