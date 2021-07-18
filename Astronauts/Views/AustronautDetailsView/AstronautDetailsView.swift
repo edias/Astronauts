@@ -16,6 +16,7 @@ struct AstronautDetailsView: View {
     var colors: [Color]
     
     private let thumbnailSize: CGFloat = 80
+    private let thumbnailGap: CGFloat = 7
     
     var body: some View {
         
@@ -28,7 +29,7 @@ struct AstronautDetailsView: View {
                 
                 ZStack {
                     Circle()
-                        .frame(width: thumbnailSize + 7, height: thumbnailSize + 7)
+                        .frame(width: thumbnailSize + thumbnailGap, height: thumbnailSize + thumbnailGap)
                         .foregroundColor(.white)
                     ThumbnailView(urlString: viewModel.astronault.imageUrl, gradientColors: colors)
                         .frame(width: thumbnailSize, height: thumbnailSize)
