@@ -13,11 +13,11 @@ class AstronautViewModel: ObservableObject {
     @Published
     private (set) var astronault: AstronautDetails = astronaultDetailsPlaceHolder
     
-    private var astronautsFetcher: AustronautsFetcher
+    private var astronautsFetcher: AstronautsFetcher
     
     private var subscriptions = Set<AnyCancellable>()
     
-    init(_ astronautsFetcher: AustronautsFetcher = AstronautsNetworkServices()) {
+    init(_ astronautsFetcher: AstronautsFetcher = AstronautsNetworkServices()) {
         self.astronautsFetcher = astronautsFetcher
     }
     

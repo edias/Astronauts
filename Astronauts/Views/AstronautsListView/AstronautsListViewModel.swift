@@ -15,15 +15,15 @@ class AstronautsListViewModel: ObservableObject {
     
     private var susbcriptions = Set<AnyCancellable>()
     
-    private var astronautsFetcher: AustronautsFetcher
+    private var astronautsFetcher: AstronautsFetcher
     
-    init(_ astronautsFetcher: AustronautsFetcher = AstronautsNetworkServices()) {
+    init(_ astronautsFetcher: AstronautsFetcher = AstronautsNetworkServices()) {
         self.astronautsFetcher = astronautsFetcher
     }
     
     func loadAstronauts() {
         
-        astronautsFetcher.fetchAustronauts().receive(on: RunLoop.main).sink { _ in }
+        astronautsFetcher.fetchAstronauts().receive(on: RunLoop.main).sink { _ in }
             receiveValue: { [weak self] astronauts in
             self?.astronauts = astronauts
         }.store(in: &susbcriptions)

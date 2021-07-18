@@ -8,15 +8,15 @@
 import Combine
 import Foundation
 
-protocol AustronautsFetcher {
-    func fetchAustronauts() -> AnyPublisher<[Astronaut], Error>
+protocol AstronautsFetcher {
+    func fetchAstronauts() -> AnyPublisher<[Astronaut], Error>
     func fetchImage(_ urlString: String) -> AnyPublisher<Data, Error>
     func fetchAstronautDetails(_ id: Int) -> AnyPublisher<AstronautDetails, Error>
 }
 
-class AstronautsNetworkServices: BaseNetworkServices, AustronautsFetcher {
+class AstronautsNetworkServices: BaseNetworkServices, AstronautsFetcher {
     
-    func fetchAustronauts() -> AnyPublisher<[Astronaut], Error> {
+    func fetchAstronauts() -> AnyPublisher<[Astronaut], Error> {
         
         let astronautsResultPublisher: AnyPublisher<AstronautsResult, Error> = get(urlString: "\(Environment.URLS.base)/api/3.5.0/astronaut/?format=json")
         

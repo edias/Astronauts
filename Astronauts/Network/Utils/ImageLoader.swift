@@ -16,9 +16,9 @@ class ImageLoader: ObservableObject {
         
     private var cancellable: AnyCancellable?
     
-    private var astronautsFetcher: AustronautsFetcher
+    private var astronautsFetcher: AstronautsFetcher
     
-    init(astronautsFetcher: AustronautsFetcher = AstronautsNetworkServices()) {
+    init(astronautsFetcher: AstronautsFetcher = AstronautsNetworkServices()) {
         self.astronautsFetcher = astronautsFetcher
     }
     
