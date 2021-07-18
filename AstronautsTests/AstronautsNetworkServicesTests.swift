@@ -28,7 +28,7 @@ class AstronautsNetworkServicesTests: XCTestCase {
         }
         """
         
-        let expectation = XCTestExpectation(description: "Posts returns successfully")
+        let expectation = XCTestExpectation(description: "Astronauts returns successfully")
         
         mockAstronaultsNetworkServices.fetchAstronauts().sink { _ in } receiveValue: { astronauts in
             XCTAssertEqual(astronauts.count, 1)
