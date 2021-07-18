@@ -31,18 +31,19 @@ struct AstronautDetailsView: View {
                         .frame(width: thumbnailSize + 7, height: thumbnailSize + 7)
                         .foregroundColor(.white)
                     ThumbnailView(urlString: viewModel.astronault.imageUrl, gradientColors: colors)
-                        .foregroundColor(Color.red)
                         .frame(width: thumbnailSize, height: thumbnailSize)
-                }
+                }.unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
                 Text(viewModel.astronault.name)
                     .tracking(1)
                     .foregroundColor(.black).opacity(0.8)
                     .font(.system(size: 22, weight: .semibold, design: .default))
+                    .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
                 Text(viewModel.astronault.nationality)
                     .foregroundColor(.black).opacity(0.4)
                     .font(.system(size: 12, weight: .regular, design: .default))
+                    .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
                 Spacer().frame(height: 20)
                 
@@ -53,6 +54,7 @@ struct AstronautDetailsView: View {
                 Spacer().frame(height: 20)
                 
                 AstronautDetailsGridView(gridValues: viewModel.astronault.gridValues)
+                    .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
                 Spacer().frame(height: 20)
                 
@@ -61,6 +63,7 @@ struct AstronautDetailsView: View {
                     .padding(.horizontal, 15)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .lineSpacing(5)
+                    .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
             }.offset(y: -55)
             

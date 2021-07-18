@@ -28,7 +28,9 @@ struct AstronautsListView: View {
                         NavigationLink(destination: AstronautDetailsView(astronautId: astronaut.id, colors: astronaut.colors)) {
                             AstronautRollView(astronaut).background(Color.white)
                         }.buttonStyle(PlainButtonStyle())
-                    }.listStyle(GroupedListStyle())
+                    }
+                    .listStyle(GroupedListStyle())
+                    .unredacted(when: viewModel.isAstronautsLoaded)
                 }
             }.navigationTitle("Astronauts")
         }

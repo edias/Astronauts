@@ -11,6 +11,9 @@ import Foundation
 class AstronautDetailsViewModel: ErrorHandlerPublisher {
     
     @Published
+    private (set) var isAstronautsDetailsLoaded = false
+    
+    @Published
     private (set) var astronault: AstronautDetailsDataModel = astronaultDetailsPlaceHolder
     
     private var astronautsFetcher: AstronautsFetcher
@@ -28,6 +31,7 @@ class AstronautDetailsViewModel: ErrorHandlerPublisher {
             self?.handleError(data)
         }receiveValue: { [weak self] astronault in
             self?.astronault = astronault.makeDetailsViewModel()
+            self?.isAstronautsDetailsLoaded = true
         }.store(in: &subscriptions)
     }
     
@@ -38,7 +42,7 @@ class AstronautDetailsViewModel: ErrorHandlerPublisher {
         return AstronautDetailsDataModel(id: 0,
                                           name: "Astronaut Name",
                                           nationality: "Nationality",
-                                          bio: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus.",
+                                          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                                           imageUrl: "",
                                           gridValues: gridValues)
     }
