@@ -6,9 +6,7 @@
 //
 
 import Foundation
-
 import Combine
-import Foundation
 
 class AstronautsListViewModel: ObservableObject {
     
