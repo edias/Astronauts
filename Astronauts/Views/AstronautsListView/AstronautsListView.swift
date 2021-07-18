@@ -34,6 +34,7 @@ struct AstronautsListView: View {
                 }
             }.navigationTitle("Astronauts")
         }
+        .accentColor(ColorPalette.lightColor)
         .onAppear { viewModel.loadAstronauts() }
         .onError(viewModel.errorType, retryAction: { viewModel.loadAstronauts() })
     }

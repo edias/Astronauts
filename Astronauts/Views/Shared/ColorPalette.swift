@@ -14,5 +14,6 @@ struct ColorPalette {
     static let secondaryColor = Color("SecondaryColor")
     static let tertiaryColor = Color("TertiaryColor")
     static let quaternaryColor = Color("QuaternaryColor")
+    static let lightColor = Color("LightColor")
     static let ascentContrastColor = Color("AscentContrastColor")
 }
