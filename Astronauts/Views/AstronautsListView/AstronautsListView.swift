@@ -20,7 +20,7 @@ struct AstronautsListView: View {
                 
                 HStack {
                     Spacer()
-                    SortingButton(isAscendent: $viewModel.isSortingAscendent)
+                    SortingButton(isSortingAscendent: $viewModel.isSortingAscendent)
                 }.padding(.trailing, 12)
                 
                 ScrollView {
