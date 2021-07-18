@@ -1,5 +1,5 @@
 //
-//  AstronaultViewModel.swift
+//  AstronautDetailsViewModel.swift
 //  Astronauts
 //
 //  Created by Eduardo Dias on 18/07/21.
@@ -14,7 +14,7 @@ class AstronautDetailsViewModel: ErrorHandlerPublisher {
     private (set) var isAstronautsDetailsLoaded = false
     
     @Published
-    private (set) var astronault: AstronautDetailsDataModel = astronaultDetailsPlaceHolder
+    private (set) var astronaut: AstronautDetailsDataModel = astronautDetailsPlaceHolder
     
     private var astronautsFetcher: AstronautsFetcher
     
@@ -24,18 +24,19 @@ class AstronautDetailsViewModel: ErrorHandlerPublisher {
         self.astronautsFetcher = astronautsFetcher
     }
     
-    func loadAstronaultDetails(_ id: Int) {
+    func loadAstronautDetails(_ id: Int) {
         
         astronautsFetcher.fetchAstronautDetails(id).receive(on: RunLoop.main).sink { [weak self] data in
+            print(data)
             guard case .failure(_) = data else { return }
             self?.handleError(data)
-        }receiveValue: { [weak self] astronault in
-            self?.astronault = astronault.makeDetailsViewModel()
+        } receiveValue: { [weak self] astronaut in
+            self?.astronaut = astronaut.makeDetailsViewModel()
             self?.isAstronautsDetailsLoaded = true
         }.store(in: &subscriptions)
     }
     
-    private static var astronaultDetailsPlaceHolder: AstronautDetailsDataModel {
+    private static var astronautDetailsPlaceHolder: AstronautDetailsDataModel {
         
         let gridValues = (dateOfBirth: "10-10-2002", status: "Retired", flights: "2")
         
