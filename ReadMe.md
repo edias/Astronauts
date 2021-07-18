@@ -44,4 +44,4 @@ This issue is intermittent and happens from time to time due to constraints on t
 
 ## Running the tests
 
-Just go to test navigator on XCode and run SocialMediaTests. This target contains all unit tests including network services, ViewModels, Serializer, NetworkStatusHandler and Error handlers test classes.
+Just go to test navigator on XCode and run AstronautsTests. This target contains all unit tests including network services, ViewModels, Serializer, NetworkStatusHandler and Error handlers test classes.
