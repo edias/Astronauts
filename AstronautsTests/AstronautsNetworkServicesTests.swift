@@ -14,15 +14,15 @@ class AstronautsNetworkServicesTests: XCTestCase {
     
     private var susbcriptions = Set<AnyCancellable>()
 
-    private var mockAstronaultsNetworkServices: MockAstronautsNetworkServices!
+    private var mockAstronautsNetworkServices: MockAstronautsNetworkServices!
     
     override func setUp() {
-        mockAstronaultsNetworkServices = MockAstronautsNetworkServices()
+        mockAstronautsNetworkServices = MockAstronautsNetworkServices()
     }
     
     func test_astronautsReturnsSuccessfully() {
         
-        mockAstronaultsNetworkServices.jsonString = """
+        mockAstronautsNetworkServices.jsonString = """
         {
         "results": [{ "id": 1, "name": "John", "nationality": "Canadian","profileImageThumbnail": ""}]
         }
@@ -30,7 +30,7 @@ class AstronautsNetworkServicesTests: XCTestCase {
         
         let expectation = XCTestExpectation(description: "Astronauts returns successfully")
         
-        mockAstronaultsNetworkServices.fetchAstronauts().sink { _ in } receiveValue: { astronauts in
+        mockAstronautsNetworkServices.fetchAstronauts().sink { _ in } receiveValue: { astronauts in
             XCTAssertEqual(astronauts.count, 1)
             XCTAssertEqual(astronauts.first?.nationality, "Canadian")
             expectation.fulfill()
@@ -41,7 +41,7 @@ class AstronautsNetworkServicesTests: XCTestCase {
     
     func test_astronautsReturnsWithEmptyList() {
         
-        mockAstronaultsNetworkServices.jsonString = """
+        mockAstronautsNetworkServices.jsonString = """
         {
         "results": []
         }
@@ -49,7 +49,7 @@ class AstronautsNetworkServicesTests: XCTestCase {
         
         let expectation = XCTestExpectation(description: "Astronauts returns with empty list")
         
-        mockAstronaultsNetworkServices.fetchAstronauts().sink { _ in } receiveValue: { astronauts in
+        mockAstronautsNetworkServices.fetchAstronauts().sink { _ in } receiveValue: { astronauts in
             XCTAssertTrue(astronauts.isEmpty)
             expectation.fulfill()
         }.store(in: &susbcriptions)
@@ -59,7 +59,7 @@ class AstronautsNetworkServicesTests: XCTestCase {
     
     func test_astronautsReturnsFailWithMalformedData() {
         
-        mockAstronaultsNetworkServices.jsonString = """
+        mockAstronautsNetworkServices.jsonString = """
         {
         "results": [{ "id": 1, "name": "John", "nationality: "Canadian","profileImageThumbnail": ""}]
         }
@@ -67,7 +67,7 @@ class AstronautsNetworkServicesTests: XCTestCase {
         
         let expectation = XCTestExpectation(description: "Astronauts don't return due to serialization issue with malformed data")
         
-        mockAstronaultsNetworkServices.fetchAstronauts().sink { error in
+        mockAstronautsNetworkServices.fetchAstronauts().sink { error in
             switch error {
                 case .failure(let error) where error is DecodingError:
                     expectation.fulfill()
@@ -81,11 +81,11 @@ class AstronautsNetworkServicesTests: XCTestCase {
     
     func test_astronautsReturnsFailWithEmptyData() {
         
-        mockAstronaultsNetworkServices.jsonString = ""
+        mockAstronautsNetworkServices.jsonString = ""
         
         let expectation = XCTestExpectation(description: "Astronauts don't return due to serialization issue with empty data")
         
-        mockAstronaultsNetworkServices.fetchAstronauts().sink { error in
+        mockAstronautsNetworkServices.fetchAstronauts().sink { error in
             switch error {
                 case .failure(let error) where error is DecodingError:
                     expectation.fulfill()
@@ -99,17 +99,17 @@ class AstronautsNetworkServicesTests: XCTestCase {
     
     func test_astronautsReturnsFailWithErrorStatusCode() {
         
-        mockAstronaultsNetworkServices.jsonString = """
+        mockAstronautsNetworkServices.jsonString = """
         {
         "results": []
         }
         """
         
-        mockAstronaultsNetworkServices.statusCode = 500
+        mockAstronautsNetworkServices.statusCode = 500
         
         let expectation = XCTestExpectation(description: "Astronauts don't return due to error status code")
         
-        mockAstronaultsNetworkServices.fetchAstronauts().sink { error in
+        mockAstronautsNetworkServices.fetchAstronauts().sink { error in
             switch error {
                 case .failure(let error as StatusCodeError) where error == StatusCodeError.internalServerError:
                     expectation.fulfill()
@@ -123,17 +123,17 @@ class AstronautsNetworkServicesTests: XCTestCase {
     
     func test_astronautsReturnsFailWithRateLimitError() {
         
-        mockAstronaultsNetworkServices.jsonString = """
+        mockAstronautsNetworkServices.jsonString = """
         {
         "results": []
         }
         """
         
-        mockAstronaultsNetworkServices.statusCode = 429
+        mockAstronautsNetworkServices.statusCode = 429
         
         let expectation = XCTestExpectation(description: "Astronauts don't return due to reached limit requests")
         
-        mockAstronaultsNetworkServices.fetchAstronauts().sink { error in
+        mockAstronautsNetworkServices.fetchAstronauts().sink { error in
             switch error {
                 case .failure(let error as StatusCodeError) where error == StatusCodeError.tooManyRequests:
                     expectation.fulfill()

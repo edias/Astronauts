@@ -49,12 +49,12 @@ class AstronautDetailsViewModelTests: XCTestCase {
         
         let vm = AstronautDetailsViewModel(mockAstronautsNetworkServices)
         
-        vm.$astronault.dropFirst().sink { astronautDetails in
+        vm.$astronaut.dropFirst().sink { astronautDetails in
             XCTAssertEqual(astronautDetails.gridValues.dateOfBirth, "10-02-1956")
             expectation.fulfill()
         }.store(in: &susbcriptions)
         
-        vm.loadAstronaultDetails(0)
+        vm.loadAstronautDetails(0)
         
         wait(for: [expectation], timeout: 1)
     }
@@ -83,7 +83,7 @@ class AstronautDetailsViewModelTests: XCTestCase {
             expectation.fulfill()
         }.store(in: &susbcriptions)
         
-        vm.loadAstronaultDetails(1)
+        vm.loadAstronautDetails(1)
         
         wait(for: [expectation], timeout: 1)
     }
@@ -102,7 +102,7 @@ class AstronautDetailsViewModelTests: XCTestCase {
             expectation.fulfill()
         }.store(in: &susbcriptions)
         
-        vm.loadAstronaultDetails(1)
+        vm.loadAstronautDetails(1)
         
         wait(for: [expectation], timeout: 1)
     }

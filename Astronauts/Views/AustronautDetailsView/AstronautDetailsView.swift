@@ -32,18 +32,18 @@ struct AstronautDetailsView: View {
                     Circle()
                         .frame(width: thumbnailSize + thumbnailGap, height: thumbnailSize + thumbnailGap)
                         .foregroundColor(ColorPalette.primaryColor)
-                    ThumbnailView(urlString: viewModel.astronault.imageUrl, gradientColors: colors)
+                    ThumbnailView(urlString: viewModel.astronaut.imageUrl, gradientColors: colors)
                         .frame(width: thumbnailSize, height: thumbnailSize)
                 }
                 .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
-                Text(viewModel.astronault.name)
+                Text(viewModel.astronaut.name)
                     .tracking(1)
                     .foregroundColor(ColorPalette.primaryContrastColor)
                     .font(.system(size: 22, weight: .semibold, design: .default))
                     .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
-                Text(viewModel.astronault.nationality)
+                Text(viewModel.astronaut.nationality)
                     .foregroundColor(ColorPalette.tertiaryColor)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .unredacted(when: viewModel.isAstronautsDetailsLoaded)
@@ -56,12 +56,12 @@ struct AstronautDetailsView: View {
                 
                 Spacer().frame(height: 20)
                 
-                AstronautDetailsGridView(gridValues: viewModel.astronault.gridValues)
+                AstronautDetailsGridView(gridValues: viewModel.astronaut.gridValues)
                     .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
                 Spacer().frame(height: 20)
                 
-                Text(viewModel.astronault.bio)
+                Text(viewModel.astronaut.bio)
                     .foregroundColor(ColorPalette.tertiaryColor)
                     .padding(.horizontal, 15)
                     .font(.system(size: 12, weight: .regular, design: .default))
@@ -74,8 +74,8 @@ struct AstronautDetailsView: View {
             
         }
         .edgesIgnoringSafeArea(.all)
-        .onAppear { viewModel.loadAstronaultDetails(astronautId) }
-        .onError(viewModel.errorType, retryAction: { viewModel.loadAstronaultDetails(astronautId) })
+        .onAppear { viewModel.loadAstronautDetails(astronautId) }
+        .onError(viewModel.errorType, retryAction: { viewModel.loadAstronautDetails(astronautId) })
     }
 }
 
