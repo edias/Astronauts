@@ -9,6 +9,11 @@ import SwiftUI
 
 struct AstronautView: View {
     
+    @ObservedObject
+    private var viewModel = AstronautViewModel()
+    
+    var astronautId: Int
+    
     private let thumbnailSize: CGFloat = 80
     
     var body: some View {
@@ -24,17 +29,17 @@ struct AstronautView: View {
                     Circle()
                         .frame(width: thumbnailSize + 7, height: thumbnailSize + 7)
                         .foregroundColor(.white)
-                    ThumbnailView("")
+                    ThumbnailView(viewModel.astronault.profileImageThumbnail)
                         .foregroundColor(Color.red)
                         .frame(width: thumbnailSize, height: thumbnailSize)
                 }
                 
-                Text("Kevin R. Kregel")
+                Text(viewModel.astronault.name)
                     .tracking(1)
                     .foregroundColor(.black).opacity(0.8)
                     .font(.system(size: 22, weight: .semibold, design: .default))
                 
-                Text("American")
+                Text(viewModel.astronault.nationality)
                     .foregroundColor(.black).opacity(0.4)
                     .font(.system(size: 12, weight: .regular, design: .default))
                 
@@ -50,25 +55,25 @@ struct AstronautView: View {
                 
                 Spacer().frame(height: 20)
                 
-                Text("Jennifer Sidey-Gibbons hails from Calgary, Alberta. She holds an honors bachelor's degree in mechanical engineering from McGill University in Montreal and a doctorate in engineering from the University of Cambridge. While at McGill, she conducted research on flame propagation in microgravity, in collaboration with CSA and the National Research Council Flight Research Laboratory. Prior to joining CSA, Sidey-Gibbons worked as an assistant professor in combustion in the Department of Engineering at Cambrid.")
+                Text(viewModel.astronault.bio)
                     .foregroundColor(.black).opacity(0.4)
                     .padding(.horizontal, 15)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .lineSpacing(5)
                 
-                Spacer()
-                
             }.offset(y: -55)
             
             Spacer()
             
-        }.edgesIgnoringSafeArea(.all)
+        }
+        .edgesIgnoringSafeArea(.all)
+        .onAppear { viewModel.loadAstronaultDetails(astronautId) }
     }
 }
 
 struct AstronautView_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautView()
-            .previewLayout(.fixed(width: 400, height: 600))
+        AstronautView(astronautId: 0)
+            .previewLayout(.fixed(width: 400, height: 800))
     }
 }

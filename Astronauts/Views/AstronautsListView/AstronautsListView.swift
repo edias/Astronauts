@@ -19,7 +19,12 @@ struct AstronautsListView: View {
             VStack {
                 ScrollView {
                     ForEach(viewModel.astronauts, id: \.self) { astronaut in
-                        AstronautRollView(astronaut)
+                        
+                        NavigationLink(destination: AstronautView(astronautId: astronaut.id)) {
+                            AstronautRollView(astronaut).background(Color.white)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
                     }.listStyle(GroupedListStyle())
                 }
             }.navigationTitle("Astronauts")

@@ -11,6 +11,7 @@ import Foundation
 protocol AustronautsFetcher {
     func fetchAustronauts() -> AnyPublisher<[Astronaut], Error>
     func fetchImage(_ urlString: String) -> AnyPublisher<Data, Error>
+    func fetchAstronautDetails(_ id: Int) -> AnyPublisher<AstronautDetails, Error>
 }
 
 class AstronautsNetworkServices: BaseNetworkServices, AustronautsFetcher {
@@ -26,5 +27,9 @@ class AstronautsNetworkServices: BaseNetworkServices, AustronautsFetcher {
     
     func fetchImage(_ urlString: String) -> AnyPublisher<Data, Error> {
         get(imageUrlString: urlString)
+    }
+    
+    func fetchAstronautDetails(_ id: Int) -> AnyPublisher<AstronautDetails, Error> {
+        get(urlString: "\(Environment.URLS.base)/api/3.5.0/astronaut/\(id)?format=json")
     }
 }
