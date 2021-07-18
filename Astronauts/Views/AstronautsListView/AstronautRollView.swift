@@ -17,22 +17,24 @@ struct AstronautRollView: View {
 
     var body: some View {
         
-        HStack {
-            
-            ThumbnailView(urlString: astronaut.imageUrl, gradientColors: astronaut.colors)
-                .frame(width: 50, height: 50)
-                .padding(.leading, 10)
-                .padding(.trailing, 2)
-                .padding(.vertical, 8)
-            
-            VStack (alignment: .leading){
-                Text(astronaut.name)
-                    .font(.callout)
-                Text(astronaut.nationality)
-                    .font(.caption)
+        VStack (alignment: .leading){
+            HStack {
+                ThumbnailView(urlString: astronaut.imageUrl, gradientColors: astronaut.colors)
+                    .frame(width: 50, height: 50)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 2)
+                    .padding(.vertical, 8)
+                
+                VStack (alignment: .leading){
+                    Text(astronaut.name)
+                        .font(.callout)
+                    Text(astronaut.nationality)
+                        .font(.caption)
+                        .foregroundColor(ColorPalette.tertiaryColor)
+                }
             }
-            
             Spacer()
+            Divider().background(ColorPalette.secondaryColor.opacity(0.5))
         }
     }
 }
