@@ -17,14 +17,17 @@ struct AstronautsListView: View {
         NavigationView {
             
             VStack {
+                
+                HStack {
+                    Spacer()
+                    SortingButton(isAscendent: $viewModel.isSortingAscendent)
+                }.padding(.trailing, 12)
+                
                 ScrollView {
                     ForEach(viewModel.astronauts, id: \.self) { astronaut in
-                        
                         NavigationLink(destination: AstronautDetailsView(astronautId: astronaut.id)) {
                             AstronautRollView(astronaut).background(Color.white)
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        
+                        }.buttonStyle(PlainButtonStyle())
                     }.listStyle(GroupedListStyle())
                 }
             }.navigationTitle("Astronauts")

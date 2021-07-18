@@ -19,6 +19,7 @@
 		F822EB4826A3DDC000F29E78 /* AstronautDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4726A3DDC000F29E78 /* AstronautDetails.swift */; };
 		F822EB4B26A3DF3400F29E78 /* AstronautDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4A26A3DF3400F29E78 /* AstronautDetailsViewModel.swift */; };
 		F86BD3AB26A3F85E000F744C /* AstronaultDetailsViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86BD3AA26A3F85E000F744C /* AstronaultDetailsViewmodel.swift */; };
+		F8AC20D826A4135100117FAE /* SortingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AC20D726A4135100117FAE /* SortingButton.swift */; };
 		F8E0D56A26A1B7080015E13D /* AstronautsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56926A1B7080015E13D /* AstronautsApp.swift */; };
 		F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */; };
 		F8E0D56E26A1B7090015E13D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D56D26A1B7090015E13D /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		F822EB4726A3DDC000F29E78 /* AstronautDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetails.swift; sourceTree = "<group>"; };
 		F822EB4A26A3DF3400F29E78 /* AstronautDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewModel.swift; sourceTree = "<group>"; };
 		F86BD3AA26A3F85E000F744C /* AstronaultDetailsViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronaultDetailsViewmodel.swift; sourceTree = "<group>"; };
+		F8AC20D726A4135100117FAE /* SortingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingButton.swift; sourceTree = "<group>"; };
 		F8E0D56626A1B7080015E13D /* Astronauts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronauts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D56926A1B7080015E13D /* AstronautsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsApp.swift; sourceTree = "<group>"; };
 		F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsListView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				F822EB4626A2F53800F29E78 /* AstronautRollView */,
 				F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */,
 				F822EB2E26A25D2A00F29E78 /* AstronautsListViewModel.swift */,
+				F8AC20D726A4135100117FAE /* SortingButton.swift */,
 			);
 			path = AstronautsListView;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				F8F932EF26A2559D006957FD /* AstronautRollView.swift in Sources */,
 				F822EB4B26A3DF3400F29E78 /* AstronautDetailsViewModel.swift in Sources */,
 				F822EB3A26A27E5400F29E78 /* Colors+Utils.swift in Sources */,
+				F8AC20D826A4135100117FAE /* SortingButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
