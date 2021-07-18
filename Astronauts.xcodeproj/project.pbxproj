@@ -33,6 +33,9 @@
 		F8E77B5626A44EB600B88862 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5526A44EB600B88862 /* ColorPalette.swift */; };
 		F8E77B5826A44FE800B88862 /* SerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5726A44FE800B88862 /* SerializerTests.swift */; };
 		F8E77B5A26A4501C00B88862 /* NetworkStatusHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5926A4501C00B88862 /* NetworkStatusHandlerTests.swift */; };
+		F8E77B5C26A450A100B88862 /* MockRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5B26A450A100B88862 /* MockRestClient.swift */; };
+		F8E77B5E26A450FB00B88862 /* MockAstronautsNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5D26A450FB00B88862 /* MockAstronautsNetworkServices.swift */; };
+		F8E77B6026A4516800B88862 /* AstronautsNetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5F26A4516800B88862 /* AstronautsNetworkServicesTests.swift */; };
 		F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E226A1BA75006957FD /* NetworkServices.swift */; };
 		F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */; };
 		F8F932E726A1BA75006957FD /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E426A1BA75006957FD /* Serializer.swift */; };
@@ -82,6 +85,9 @@
 		F8E77B5526A44EB600B88862 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		F8E77B5726A44FE800B88862 /* SerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerTests.swift; sourceTree = "<group>"; };
 		F8E77B5926A4501C00B88862 /* NetworkStatusHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandlerTests.swift; sourceTree = "<group>"; };
+		F8E77B5B26A450A100B88862 /* MockRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRestClient.swift; sourceTree = "<group>"; };
+		F8E77B5D26A450FB00B88862 /* MockAstronautsNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAstronautsNetworkServices.swift; sourceTree = "<group>"; };
+		F8E77B5F26A4516800B88862 /* AstronautsNetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsNetworkServicesTests.swift; sourceTree = "<group>"; };
 		F8F932E226A1BA75006957FD /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandler.swift; sourceTree = "<group>"; };
 		F8F932E426A1BA75006957FD /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
@@ -260,6 +266,9 @@
 				F8E0D57D26A1B7090015E13D /* Info.plist */,
 				F8E77B5726A44FE800B88862 /* SerializerTests.swift */,
 				F8E77B5926A4501C00B88862 /* NetworkStatusHandlerTests.swift */,
+				F8E77B5B26A450A100B88862 /* MockRestClient.swift */,
+				F8E77B5D26A450FB00B88862 /* MockAstronautsNetworkServices.swift */,
+				F8E77B5F26A4516800B88862 /* AstronautsNetworkServicesTests.swift */,
 			);
 			path = AstronautsTests;
 			sourceTree = "<group>";
@@ -437,7 +446,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E77B6026A4516800B88862 /* AstronautsNetworkServicesTests.swift in Sources */,
+				F8E77B5C26A450A100B88862 /* MockRestClient.swift in Sources */,
 				F8E77B5826A44FE800B88862 /* SerializerTests.swift in Sources */,
+				F8E77B5E26A450FB00B88862 /* MockAstronautsNetworkServices.swift in Sources */,
 				F8E77B5A26A4501C00B88862 /* NetworkStatusHandlerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
