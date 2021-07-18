@@ -27,7 +27,6 @@ class AstronautDetailsViewModel: ErrorHandlerPublisher {
     func loadAstronautDetails(_ id: Int) {
         
         astronautsFetcher.fetchAstronautDetails(id).receive(on: RunLoop.main).sink { [weak self] data in
-            print(data)
             guard case .failure(_) = data else { return }
             self?.handleError(data)
         } receiveValue: { [weak self] astronaut in
