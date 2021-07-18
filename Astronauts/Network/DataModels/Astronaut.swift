@@ -8,6 +8,7 @@
 import Foundation
 
 struct Astronaut: Codable, Hashable {
+    let id: Int
     let name: String
     let nationality: String
     let profileImageThumbnail: String

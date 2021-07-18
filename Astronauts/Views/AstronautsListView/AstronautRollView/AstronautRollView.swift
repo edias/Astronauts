@@ -39,7 +39,7 @@ struct AstronautRollView: View {
 
 struct AstronautRollView_Previews: PreviewProvider {
     
-    private static var astronaut = Astronaut(name: "Joe", nationality: "AUS", profileImageThumbnail: "")
+    private static var astronaut = Astronaut(id: 0, name: "Joe", nationality: "AUS", profileImageThumbnail: "")
     
     static var previews: some View {
         Group {
