@@ -1,5 +1,5 @@
 //
-//  AstronaultDetailsViewmodel.swift
+//  AstronautDetailsDataModel.swift
 //  Astronauts
 //
 //  Created by Eduardo Dias on 18/07/21.
