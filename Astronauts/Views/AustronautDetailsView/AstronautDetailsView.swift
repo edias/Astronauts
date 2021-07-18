@@ -13,6 +13,7 @@ struct AstronautDetailsView: View {
     private var viewModel = AstronautDetailsViewModel()
     
     var astronautId: Int
+    var colors: [Color]
     
     private let thumbnailSize: CGFloat = 80
     
@@ -29,7 +30,7 @@ struct AstronautDetailsView: View {
                     Circle()
                         .frame(width: thumbnailSize + 7, height: thumbnailSize + 7)
                         .foregroundColor(.white)
-                    ThumbnailView(viewModel.astronault.imageUrl)
+                    ThumbnailView(urlString: viewModel.astronault.imageUrl, gradientColors: colors)
                         .foregroundColor(Color.red)
                         .frame(width: thumbnailSize, height: thumbnailSize)
                 }
@@ -74,7 +75,7 @@ struct AstronautDetailsView: View {
 
 struct AstronautView_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautDetailsView(astronautId: 0)
+        AstronautDetailsView(astronautId: 0, colors: [])
             .previewLayout(.fixed(width: 400, height: 800))
     }
 }

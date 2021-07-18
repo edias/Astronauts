@@ -17,10 +17,3 @@ struct Astronaut: Codable {
 struct AstronautsResult: Codable {
     let results: [Astronaut]
 }
-
-
-extension Astronaut: Hashable, Comparable {
-    static func < (lhs: Astronaut, rhs: Astronaut) -> Bool {
-        lhs.name < rhs.name
-    }
-}

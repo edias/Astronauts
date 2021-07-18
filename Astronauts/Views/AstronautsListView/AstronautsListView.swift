@@ -25,7 +25,7 @@ struct AstronautsListView: View {
                 
                 ScrollView {
                     ForEach(viewModel.astronauts, id: \.self) { astronaut in
-                        NavigationLink(destination: AstronautDetailsView(astronautId: astronaut.id)) {
+                        NavigationLink(destination: AstronautDetailsView(astronautId: astronaut.id, colors: astronaut.colors)) {
                             AstronautRollView(astronaut).background(Color.white)
                         }.buttonStyle(PlainButtonStyle())
                     }.listStyle(GroupedListStyle())

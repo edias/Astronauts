@@ -15,7 +15,10 @@ struct ThumbnailView: View {
     @ObservedObject
     private var imageLoader = ImageLoader()
     
-    init(_ urlString: String) {
+    private var gradientColors: [Color]
+    
+    init(urlString: String, gradientColors: [Color]) {
+        self.gradientColors = gradientColors
         self.imageLoader.loadImage(urlString)
     }
     
@@ -30,7 +33,7 @@ struct ThumbnailView: View {
                 Circle()
                     .stroke(
                         LinearGradient(gradient:
-                                        Gradient(colors: Color.randomGradient),
+                                        Gradient(colors: gradientColors),
                                        startPoint: .leading, endPoint: .trailing),
                         lineWidth: 2)
             )
@@ -43,6 +46,6 @@ struct ThumbnailView: View {
 
 struct ThumbnailView_Previews: PreviewProvider {
     static var previews: some View {
-        ThumbnailView("")
+        ThumbnailView(urlString:"", gradientColors: [])
     }
 }

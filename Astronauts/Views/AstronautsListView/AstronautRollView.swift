@@ -9,9 +9,9 @@ import SwiftUI
 
 struct AstronautRollView: View {
     
-    private var astronaut: Astronaut
+    private var astronaut: AstronautRollDataModel
 
-    init(_ astronaut: Astronaut) {
+    init(_ astronaut: AstronautRollDataModel) {
         self.astronaut = astronaut
     }
 
@@ -19,7 +19,7 @@ struct AstronautRollView: View {
         
         HStack {
             
-            ThumbnailView(astronaut.profileImageThumbnail)
+            ThumbnailView(urlString: astronaut.imageUrl, gradientColors: astronaut.colors)
                 .frame(width: 50, height: 50)
                 .padding(.leading, 10)
                 .padding(.trailing, 2)
@@ -39,8 +39,11 @@ struct AstronautRollView: View {
 
 struct AstronautRollView_Previews: PreviewProvider {
     
-    private static var astronaut = Astronaut(id: 0, name: "Joe", nationality: "AUS", profileImageThumbnail: "")
-    
+    private static var astronaut = AstronautRollDataModel(id: 0,
+                                                          name: "Joe",
+                                                          nationality: "AUS",
+                                                          imageUrl: "",
+                                                          colors: [])
     static var previews: some View {
         Group {
             AstronautRollView(astronaut)
