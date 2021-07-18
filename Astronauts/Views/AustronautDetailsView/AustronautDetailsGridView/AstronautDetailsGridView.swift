@@ -7,23 +7,23 @@
 
 import SwiftUI
 
-struct AstronautGridView: View {
+struct AstronautDetailsGridView: View {
     
     var body: some View {
         
         HStack {
-            AstronautGridCellView()
-            AstronautGridCellDivider()
-            AstronautGridCellView()
-            AstronautGridCellDivider()
-            AstronautGridCellView()
+            AstronautDetailsGridCellView()
+            AstronautDetailsGridCellDivider()
+            AstronautDetailsGridCellView()
+            AstronautDetailsGridCellDivider()
+            AstronautDetailsGridCellView()
         }.border(Color.gray.opacity(0.2))
     }
 }
 
 struct AstronautInfoGridView_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautGridView()
+        AstronautDetailsGridView()
             .previewLayout(.fixed(width: 400, height: 100))
     }
 }

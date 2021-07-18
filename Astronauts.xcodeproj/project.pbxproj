@@ -12,12 +12,12 @@
 		F822EB3526A2733200F29E78 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3426A2733200F29E78 /* ImageLoader.swift */; };
 		F822EB3726A2755900F29E78 /* ThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3626A2755900F29E78 /* ThumbnailView.swift */; };
 		F822EB3A26A27E5400F29E78 /* Colors+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3926A27E5400F29E78 /* Colors+Utils.swift */; };
-		F822EB3D26A28E7300F29E78 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3C26A28E7300F29E78 /* AstronautView.swift */; };
-		F822EB3F26A2F38700F29E78 /* AstronautGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3E26A2F38700F29E78 /* AstronautGridView.swift */; };
-		F822EB4226A2F46500F29E78 /* AstronautGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4126A2F46500F29E78 /* AstronautGridCellView.swift */; };
-		F822EB4426A2F4B400F29E78 /* AstronautGridCellDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4326A2F4B400F29E78 /* AstronautGridCellDivider.swift */; };
+		F822EB3D26A28E7300F29E78 /* AstronautDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3C26A28E7300F29E78 /* AstronautDetailsView.swift */; };
+		F822EB3F26A2F38700F29E78 /* AstronautDetailsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB3E26A2F38700F29E78 /* AstronautDetailsGridView.swift */; };
+		F822EB4226A2F46500F29E78 /* AstronautDetailsGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4126A2F46500F29E78 /* AstronautDetailsGridCellView.swift */; };
+		F822EB4426A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4326A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift */; };
 		F822EB4826A3DDC000F29E78 /* AstronautDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4726A3DDC000F29E78 /* AstronautDetails.swift */; };
-		F822EB4B26A3DF3400F29E78 /* AstronaultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4A26A3DF3400F29E78 /* AstronaultViewModel.swift */; };
+		F822EB4B26A3DF3400F29E78 /* AstronautDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822EB4A26A3DF3400F29E78 /* AstronautDetailsViewModel.swift */; };
 		F8E0D56A26A1B7080015E13D /* AstronautsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56926A1B7080015E13D /* AstronautsApp.swift */; };
 		F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */; };
 		F8E0D56E26A1B7090015E13D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D56D26A1B7090015E13D /* Assets.xcassets */; };
@@ -46,12 +46,12 @@
 		F822EB3426A2733200F29E78 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		F822EB3626A2755900F29E78 /* ThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailView.swift; sourceTree = "<group>"; };
 		F822EB3926A27E5400F29E78 /* Colors+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Utils.swift"; sourceTree = "<group>"; };
-		F822EB3C26A28E7300F29E78 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
-		F822EB3E26A2F38700F29E78 /* AstronautGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautGridView.swift; sourceTree = "<group>"; };
-		F822EB4126A2F46500F29E78 /* AstronautGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautGridCellView.swift; sourceTree = "<group>"; };
-		F822EB4326A2F4B400F29E78 /* AstronautGridCellDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautGridCellDivider.swift; sourceTree = "<group>"; };
+		F822EB3C26A28E7300F29E78 /* AstronautDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsView.swift; sourceTree = "<group>"; };
+		F822EB3E26A2F38700F29E78 /* AstronautDetailsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsGridView.swift; sourceTree = "<group>"; };
+		F822EB4126A2F46500F29E78 /* AstronautDetailsGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsGridCellView.swift; sourceTree = "<group>"; };
+		F822EB4326A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsGridCellDivider.swift; sourceTree = "<group>"; };
 		F822EB4726A3DDC000F29E78 /* AstronautDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetails.swift; sourceTree = "<group>"; };
-		F822EB4A26A3DF3400F29E78 /* AstronaultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronaultViewModel.swift; sourceTree = "<group>"; };
+		F822EB4A26A3DF3400F29E78 /* AstronautDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewModel.swift; sourceTree = "<group>"; };
 		F8E0D56626A1B7080015E13D /* Astronauts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astronauts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D56926A1B7080015E13D /* AstronautsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsApp.swift; sourceTree = "<group>"; };
 		F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsListView.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		F822EB2C26A25BF400F29E78 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F822EB3B26A28DE300F29E78 /* AustronautView */,
+				F822EB3B26A28DE300F29E78 /* AustronautDetailsView */,
 				F822EB2D26A25BF800F29E78 /* AstronautsListView */,
 			);
 			path = Views;
@@ -129,24 +129,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		F822EB3B26A28DE300F29E78 /* AustronautView */ = {
+		F822EB3B26A28DE300F29E78 /* AustronautDetailsView */ = {
 			isa = PBXGroup;
 			children = (
-				F822EB4526A2F50400F29E78 /* AustronautGridView */,
-				F822EB3C26A28E7300F29E78 /* AstronautView.swift */,
-				F822EB4A26A3DF3400F29E78 /* AstronaultViewModel.swift */,
+				F822EB4526A2F50400F29E78 /* AustronautDetailsGridView */,
+				F822EB3C26A28E7300F29E78 /* AstronautDetailsView.swift */,
+				F822EB4A26A3DF3400F29E78 /* AstronautDetailsViewModel.swift */,
 			);
-			path = AustronautView;
+			path = AustronautDetailsView;
 			sourceTree = "<group>";
 		};
-		F822EB4526A2F50400F29E78 /* AustronautGridView */ = {
+		F822EB4526A2F50400F29E78 /* AustronautDetailsGridView */ = {
 			isa = PBXGroup;
 			children = (
-				F822EB3E26A2F38700F29E78 /* AstronautGridView.swift */,
-				F822EB4126A2F46500F29E78 /* AstronautGridCellView.swift */,
-				F822EB4326A2F4B400F29E78 /* AstronautGridCellDivider.swift */,
+				F822EB3E26A2F38700F29E78 /* AstronautDetailsGridView.swift */,
+				F822EB4126A2F46500F29E78 /* AstronautDetailsGridCellView.swift */,
+				F822EB4326A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift */,
 			);
-			path = AustronautGridView;
+			path = AustronautDetailsGridView;
 			sourceTree = "<group>";
 		};
 		F822EB4626A2F53800F29E78 /* AstronautRollView */ = {
@@ -344,9 +344,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822EB3D26A28E7300F29E78 /* AstronautView.swift in Sources */,
+				F822EB3D26A28E7300F29E78 /* AstronautDetailsView.swift in Sources */,
 				F8F932ED26A1BB63006957FD /* AstronautsNetworkServices.swift in Sources */,
-				F822EB4426A2F4B400F29E78 /* AstronautGridCellDivider.swift in Sources */,
+				F822EB4426A2F4B400F29E78 /* AstronautDetailsGridCellDivider.swift in Sources */,
 				F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */,
 				F822EB4826A3DDC000F29E78 /* AstronautDetails.swift in Sources */,
 				F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */,
@@ -355,13 +355,13 @@
 				F822EB3526A2733200F29E78 /* ImageLoader.swift in Sources */,
 				F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */,
 				F8F932EA26A1BAEA006957FD /* Astronaut.swift in Sources */,
-				F822EB3F26A2F38700F29E78 /* AstronautGridView.swift in Sources */,
-				F822EB4226A2F46500F29E78 /* AstronautGridCellView.swift in Sources */,
+				F822EB3F26A2F38700F29E78 /* AstronautDetailsGridView.swift in Sources */,
+				F822EB4226A2F46500F29E78 /* AstronautDetailsGridCellView.swift in Sources */,
 				F8E0D56A26A1B7080015E13D /* AstronautsApp.swift in Sources */,
 				F822EB3726A2755900F29E78 /* ThumbnailView.swift in Sources */,
 				F8F932E726A1BA75006957FD /* Serializer.swift in Sources */,
 				F8F932EF26A2559D006957FD /* AstronautRollView.swift in Sources */,
-				F822EB4B26A3DF3400F29E78 /* AstronaultViewModel.swift in Sources */,
+				F822EB4B26A3DF3400F29E78 /* AstronautDetailsViewModel.swift in Sources */,
 				F822EB3A26A27E5400F29E78 /* Colors+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

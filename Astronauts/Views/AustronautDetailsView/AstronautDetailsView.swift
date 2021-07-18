@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AstronautView: View {
+struct AstronautDetailsView: View {
     
     @ObservedObject
-    private var viewModel = AstronautViewModel()
+    private var viewModel = AstronautDetailsViewModel()
     
     var astronautId: Int
     
@@ -51,7 +51,7 @@ struct AstronautView: View {
                 
                 Spacer().frame(height: 20)
                 
-                AstronautGridView()
+                AstronautDetailsGridView()
                 
                 Spacer().frame(height: 20)
                 
@@ -73,7 +73,7 @@ struct AstronautView: View {
 
 struct AstronautView_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautView(astronautId: 0)
+        AstronautDetailsView(astronautId: 0)
             .previewLayout(.fixed(width: 400, height: 800))
     }
 }

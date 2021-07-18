@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AstronautGridCellDivider: View {
+struct AstronautDetailsGridCellDivider: View {
     var body: some View {
         Rectangle()
             .foregroundColor(.black.opacity(0.2))
@@ -17,6 +17,6 @@ struct AstronautGridCellDivider: View {
 
 struct AstronautInfoGridCellDivider_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautGridCellDivider()
+        AstronautDetailsGridCellDivider()
     }
 }

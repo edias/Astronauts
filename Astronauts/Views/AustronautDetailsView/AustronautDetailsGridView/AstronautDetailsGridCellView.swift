@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AstronautGridCellView: View {
+struct AstronautDetailsGridCellView: View {
     
     var body: some View {
         VStack (spacing: 5){
@@ -24,6 +24,6 @@ struct AstronautGridCellView: View {
 
 struct AstronautGridCellView_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautGridCellView()
+        AstronautDetailsGridCellView()
     }
 }

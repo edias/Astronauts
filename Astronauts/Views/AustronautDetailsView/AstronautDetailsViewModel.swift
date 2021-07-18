@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class AstronautViewModel: ObservableObject {
+class AstronautDetailsViewModel: ObservableObject {
     
     @Published
     private (set) var astronault: AstronautDetails = astronaultDetailsPlaceHolder
