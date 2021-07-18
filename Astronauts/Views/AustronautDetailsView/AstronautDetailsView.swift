@@ -54,7 +54,7 @@ struct AstronautDetailsView: View {
                     .frame(width: 50, height: 1)
                     .foregroundColor(ColorPalette.secondaryColor)
                 
-                Spacer().frame(height: 20)
+                Spacer().frame(height: 25)
                 
                 AstronautDetailsGridView(gridValues: viewModel.astronaut.gridValues)
                     .unredacted(when: viewModel.isAstronautsDetailsLoaded)
