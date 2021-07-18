@@ -14,6 +14,7 @@ enum StatusCodeError: Error {
     case missingApiKeyHashOrTimestamp
     case invalidRefererOrHash
     case methodNotAllowed
+    case tooManyRequests
     case unknownError
 }
 
@@ -38,6 +39,8 @@ struct NetworkStatusHandler {
                 throw StatusCodeError.methodNotAllowed
             case 409:
                 throw StatusCodeError.missingApiKeyHashOrTimestamp
+            case 429:
+                throw StatusCodeError.tooManyRequests
             case 500:
                 throw StatusCodeError.internalServerError
             default:

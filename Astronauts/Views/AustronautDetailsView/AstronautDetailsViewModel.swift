@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class AstronautDetailsViewModel: ObservableObject {
+class AstronautDetailsViewModel: ErrorHandlerPublisher {
     
     @Published
     private (set) var astronault: AstronautDetailsDataModel = astronaultDetailsPlaceHolder
@@ -23,10 +23,12 @@ class AstronautDetailsViewModel: ObservableObject {
     
     func loadAstronaultDetails(_ id: Int) {
         
-        astronautsFetcher.fetchAstronautDetails(id).receive(on: RunLoop.main).sink { _ in }
-            receiveValue: { [weak self] astronault in
-                self?.astronault = astronault.makeDetailsViewModel()
-            }.store(in: &subscriptions)
+        astronautsFetcher.fetchAstronautDetails(id).receive(on: RunLoop.main).sink { [weak self] data in
+            guard case .failure(_) = data else { return }
+            self?.handleError(data)
+        }receiveValue: { [weak self] astronault in
+            self?.astronault = astronault.makeDetailsViewModel()
+        }.store(in: &subscriptions)
     }
     
     private static var astronaultDetailsPlaceHolder: AstronautDetailsDataModel {

@@ -67,6 +67,7 @@ struct AstronautDetailsView: View {
             
         }
         .edgesIgnoringSafeArea(.all)
+        .onError(viewModel.errorType, retryAction: { viewModel.loadAstronaultDetails(astronautId) })
         .onAppear { viewModel.loadAstronaultDetails(astronautId) }
     }
 }

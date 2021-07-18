@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class AstronautsListViewModel: ObservableObject {
+class AstronautsListViewModel: ErrorHandlerPublisher {
     
     @Published
     var isSortingAscendent: Bool = true
@@ -22,15 +22,18 @@ class AstronautsListViewModel: ObservableObject {
     
     init(_ astronautsFetcher: AstronautsFetcher = AstronautsNetworkServices()) {
         self.astronautsFetcher = astronautsFetcher
+        super.init()
         setupSortingSubscription()
     }
     
     func loadAstronauts() {
         
-        astronautsFetcher.fetchAstronauts().receive(on: RunLoop.main).sink { _ in }
-            receiveValue: { [weak self] astronauts in
-                self?.astronauts = astronauts.sorted(by: <)
-            }.store(in: &susbcriptions)
+        astronautsFetcher.fetchAstronauts().receive(on: RunLoop.main).sink { [weak self] data in
+            guard case .failure(_) = data else { return }
+            self?.handleError(data)
+        } receiveValue: { [weak self] astronauts in
+            self?.astronauts = astronauts.sorted(by: <)
+        }.store(in: &susbcriptions)
     }
     
     private func setupSortingSubscription() {
@@ -40,5 +43,4 @@ class AstronautsListViewModel: ObservableObject {
                 isAscendent ? self?.astronauts.sort(by: <) : self?.astronauts.sort(by: >)
             }).store(in: &susbcriptions)
     }
-    
 }

@@ -32,6 +32,7 @@ struct AstronautsListView: View {
                 }
             }.navigationTitle("Astronauts")
         }
+        .onError(viewModel.errorType, retryAction: { viewModel.loadAstronauts() })
         .onAppear { viewModel.loadAstronauts() }
     }
 }
