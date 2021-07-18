@@ -11,7 +11,7 @@ import Foundation
 class AstronautDetailsViewModel: ObservableObject {
     
     @Published
-    private (set) var astronault: AstronautDetails = astronaultDetailsPlaceHolder
+    private (set) var astronault: AstronautDetailsDataModel = astronaultDetailsPlaceHolder
     
     private var astronautsFetcher: AstronautsFetcher
     
@@ -25,17 +25,31 @@ class AstronautDetailsViewModel: ObservableObject {
         
         astronautsFetcher.fetchAstronautDetails(id).receive(on: RunLoop.main).sink { _ in }
             receiveValue: { [weak self] astronault in
-                self?.astronault = astronault
+                self?.astronault = astronault.makeDetailsViewModel()
             }.store(in: &subscriptions)
     }
     
-    private static var astronaultDetailsPlaceHolder: AstronautDetails {
-        AstronautDetails(id: 0,
-                         name: "",
-                         nationality: "",
-                         bio: "",
-                         dateOfBirth: "",
-                         profileImageThumbnail: "",
-                         flights: [])
+    private static var astronaultDetailsPlaceHolder: AstronautDetailsDataModel {
+        
+        let gridValues = (dateOfBirth: "10-10-2002", status: "Retired", flights: "2")
+        
+        return AstronautDetailsDataModel(id: 0,
+                                          name: "Astronaut Name",
+                                          nationality: "Nationality",
+                                          bio: "Alias alias cumque. Voluptatem ipsa repudiandae ipsum reiciendis illo. Incidunt rerum id architecto doloribus.",
+                                          imageUrl: "",
+                                          gridValues: gridValues)
+    }
+}
+
+private extension AstronautDetails {
+    func makeDetailsViewModel() -> AstronautDetailsDataModel {
+        let gridValues = (dateOfBirth: dateOfBirth, status: status.name, flights: "\(flights.count)")
+        return AstronautDetailsDataModel(id: id,
+                                          name: name,
+                                          nationality: nationality,
+                                          bio: bio,
+                                          imageUrl: profileImageThumbnail,
+                                          gridValues: gridValues)
     }
 }

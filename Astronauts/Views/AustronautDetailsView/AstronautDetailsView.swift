@@ -29,7 +29,7 @@ struct AstronautDetailsView: View {
                     Circle()
                         .frame(width: thumbnailSize + 7, height: thumbnailSize + 7)
                         .foregroundColor(.white)
-                    ThumbnailView(viewModel.astronault.profileImageThumbnail)
+                    ThumbnailView(viewModel.astronault.imageUrl)
                         .foregroundColor(Color.red)
                         .frame(width: thumbnailSize, height: thumbnailSize)
                 }
@@ -51,7 +51,7 @@ struct AstronautDetailsView: View {
                 
                 Spacer().frame(height: 20)
                 
-                AstronautDetailsGridView()
+                AstronautDetailsGridView(gridValues: viewModel.astronault.gridValues)
                 
                 Spacer().frame(height: 20)
                 

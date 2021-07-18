@@ -9,21 +9,22 @@ import SwiftUI
 
 struct AstronautDetailsGridView: View {
     
+    var gridValues: (dateOfBirth: String, status: String, flights: String)
+    
     var body: some View {
-        
         HStack {
-            AstronautDetailsGridCellView()
+            AstronautDetailsGridCellView(value: gridValues.dateOfBirth, label: "Date of birth")
             AstronautDetailsGridCellDivider()
-            AstronautDetailsGridCellView()
+            AstronautDetailsGridCellView(value: gridValues.status, label: "Status")
             AstronautDetailsGridCellDivider()
-            AstronautDetailsGridCellView()
+            AstronautDetailsGridCellView(value: gridValues.flights, label: "Flights")
         }.border(Color.gray.opacity(0.2))
     }
 }
 
 struct AstronautInfoGridView_Previews: PreviewProvider {
     static var previews: some View {
-        AstronautDetailsGridView()
+        AstronautDetailsGridView(gridValues: (dateOfBirth: "10-10-2010", status: "Retired", flights: "5"))
             .previewLayout(.fixed(width: 400, height: 100))
     }
 }
