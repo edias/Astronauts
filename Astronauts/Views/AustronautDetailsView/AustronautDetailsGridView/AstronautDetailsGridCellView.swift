@@ -15,10 +15,10 @@ struct AstronautDetailsGridCellView: View {
     var body: some View {
         VStack (spacing: 5){
             Text(value)
-                .foregroundColor(.black).opacity(0.8)
+                .foregroundColor(ColorPalette.quaternaryColor)
                 .font(.system(size: 14, weight: .bold, design: .default))
             Text(label)
-                .foregroundColor(.black).opacity(0.4)
+                .foregroundColor(ColorPalette.tertiaryColor)
                 .font(.system(size: 11, weight: .semibold, design: .default))
 
         }.frame(minWidth: 0, maxWidth: .infinity)

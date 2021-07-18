@@ -30,6 +30,7 @@
 		F8E0D56C26A1B7080015E13D /* AstronautsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */; };
 		F8E0D56E26A1B7090015E13D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D56D26A1B7090015E13D /* Assets.xcassets */; };
 		F8E0D57126A1B7090015E13D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8E0D57026A1B7090015E13D /* Preview Assets.xcassets */; };
+		F8E77B5626A44EB600B88862 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5526A44EB600B88862 /* ColorPalette.swift */; };
 		F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E226A1BA75006957FD /* NetworkServices.swift */; };
 		F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */; };
 		F8F932E726A1BA75006957FD /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E426A1BA75006957FD /* Serializer.swift */; };
@@ -76,6 +77,7 @@
 		F8E0D57226A1B7090015E13D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8E0D57726A1B7090015E13D /* AstronautsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AstronautsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E0D57D26A1B7090015E13D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8E77B5526A44EB600B88862 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		F8F932E226A1BA75006957FD /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandler.swift; sourceTree = "<group>"; };
 		F8F932E426A1BA75006957FD /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				F8AC20E026A4210F00117FAE /* ErrorHandlerViewModel.swift */,
 				F822EB3626A2755900F29E78 /* ThumbnailView.swift */,
 				F8AC20DA26A4173C00117FAE /* ErrorView.swift */,
+				F8E77B5526A44EB600B88862 /* ColorPalette.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				F822EB3726A2755900F29E78 /* ThumbnailView.swift in Sources */,
 				F8F932E726A1BA75006957FD /* Serializer.swift in Sources */,
 				F8AC20DD26A417A200117FAE /* Error+View.swift in Sources */,
+				F8E77B5626A44EB600B88862 /* ColorPalette.swift in Sources */,
 				F8AC20E126A4210F00117FAE /* ErrorHandlerViewModel.swift in Sources */,
 				F8F932EF26A2559D006957FD /* AstronautRollView.swift in Sources */,
 				F822EB4B26A3DF3400F29E78 /* AstronautDetailsViewModel.swift in Sources */,

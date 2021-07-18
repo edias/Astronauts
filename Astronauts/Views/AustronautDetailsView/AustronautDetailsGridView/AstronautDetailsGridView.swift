@@ -18,7 +18,7 @@ struct AstronautDetailsGridView: View {
             AstronautDetailsGridCellView(value: gridValues.status, label: "Status")
             AstronautDetailsGridCellDivider()
             AstronautDetailsGridCellView(value: gridValues.flights, label: "Flights")
-        }.border(Color.gray.opacity(0.2))
+        }.border(ColorPalette.secondaryColor)
     }
 }
 

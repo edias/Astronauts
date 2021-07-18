@@ -26,7 +26,7 @@ struct AstronautsListView: View {
                 ScrollView {
                     ForEach(viewModel.astronauts, id: \.self) { astronaut in
                         NavigationLink(destination: AstronautDetailsView(astronautId: astronaut.id, colors: astronaut.colors)) {
-                            AstronautRollView(astronaut).background(Color.white)
+                            AstronautRollView(astronaut).background(ColorPalette.primaryColor)
                         }.buttonStyle(PlainButtonStyle())
                     }
                     .listStyle(GroupedListStyle())
@@ -34,7 +34,6 @@ struct AstronautsListView: View {
                 }
             }.navigationTitle("Astronauts")
         }
-        .accentColor(.white)
         .onAppear { viewModel.loadAstronauts() }
         .onError(viewModel.errorType, retryAction: { viewModel.loadAstronauts() })
     }
@@ -43,5 +42,7 @@ struct AstronautsListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         AstronautsListView()
+            .preferredColorScheme(.dark)
+            .previewDisplayName("Dark Mode")
     }
 }

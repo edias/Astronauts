@@ -10,8 +10,8 @@ import SwiftUI
 struct AstronautDetailsGridCellDivider: View {
     var body: some View {
         Rectangle()
-            .foregroundColor(.black.opacity(0.2))
-            .frame(width: 0.5, height: 50)
+            .foregroundColor(ColorPalette.secondaryColor)
+            .frame(width: 1, height: 50)
     }
 }
 

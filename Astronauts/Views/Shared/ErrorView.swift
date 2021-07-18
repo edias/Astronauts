@@ -39,30 +39,29 @@ struct ErrorView: View {
             Image(errorData.icon)
                 .resizable()
                 .scaledToFit()
-//                .foregroundColor(ColorPalette.secondaryGray.opacity(0.5))
-                .frame(width: 120, height: 120)
+                .foregroundColor(ColorPalette.secondaryColor)
+                .frame(width: 150, height: 150)
                 .padding(.bottom, 40)
             
             Text(errorData.message)
                 .font(.body)
                 .bold()
-//                .foregroundColor(ColorPalette.secondaryGray)
+                .foregroundColor(ColorPalette.tertiaryColor)
                 .multilineTextAlignment(.center)
             
             Spacer()
             Button("Try again") {
                 retryAction()
             }
-//            .foregroundColor(ColorPalette.ascentContrastColor)
+            .foregroundColor(ColorPalette.primaryColor)
             .padding(.vertical, 12)
             .padding(.horizontal, 30)
             .font(.subheadline.weight(.bold))
-//            .background(ColorPalette.ascentColor)
-            .background(Color.blue)
+            .background(ColorPalette.ascentContrastColor)
             .cornerRadius(35)
-            .foregroundColor(Color.white)
             .padding(.bottom, 20)
         }
+        
         .frame(width: 350, alignment: .center)
     }
 }
@@ -70,7 +69,7 @@ struct ErrorView: View {
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
         ErrorView(.tooManyRequests, retryAction: {})
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark)
             .previewDisplayName("Dark Mode")
     }
 }

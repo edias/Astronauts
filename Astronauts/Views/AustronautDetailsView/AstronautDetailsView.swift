@@ -23,6 +23,7 @@ struct AstronautDetailsView: View {
         VStack {
             
             Rectangle()
+                .fill(ColorPalette.primaryComplementaryColor)
                 .frame(height: 140)
             
             VStack {
@@ -30,19 +31,20 @@ struct AstronautDetailsView: View {
                 ZStack {
                     Circle()
                         .frame(width: thumbnailSize + thumbnailGap, height: thumbnailSize + thumbnailGap)
-                        .foregroundColor(.white)
+                        .foregroundColor(ColorPalette.primaryColor)
                     ThumbnailView(urlString: viewModel.astronault.imageUrl, gradientColors: colors)
                         .frame(width: thumbnailSize, height: thumbnailSize)
-                }.unredacted(when: viewModel.isAstronautsDetailsLoaded)
+                }
+                .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
                 Text(viewModel.astronault.name)
                     .tracking(1)
-                    .foregroundColor(.black).opacity(0.8)
+                    .foregroundColor(ColorPalette.primaryContrastColor)
                     .font(.system(size: 22, weight: .semibold, design: .default))
                     .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
                 Text(viewModel.astronault.nationality)
-                    .foregroundColor(.black).opacity(0.4)
+                    .foregroundColor(ColorPalette.tertiaryColor)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .unredacted(when: viewModel.isAstronautsDetailsLoaded)
                 
@@ -50,7 +52,7 @@ struct AstronautDetailsView: View {
                 
                 Rectangle()
                     .frame(width: 50, height: 1)
-                    .foregroundColor(.black).opacity(0.2)
+                    .foregroundColor(ColorPalette.secondaryColor)
                 
                 Spacer().frame(height: 20)
                 
@@ -60,7 +62,7 @@ struct AstronautDetailsView: View {
                 Spacer().frame(height: 20)
                 
                 Text(viewModel.astronault.bio)
-                    .foregroundColor(.black).opacity(0.4)
+                    .foregroundColor(ColorPalette.tertiaryColor)
                     .padding(.horizontal, 15)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .lineSpacing(5)
@@ -81,5 +83,7 @@ struct AstronautView_Previews: PreviewProvider {
     static var previews: some View {
         AstronautDetailsView(astronautId: 0, colors: [])
             .previewLayout(.fixed(width: 400, height: 800))
+            .preferredColorScheme(.dark)
+            .previewDisplayName("Dark Mode")
     }
 }
