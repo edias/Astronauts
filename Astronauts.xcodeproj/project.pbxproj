@@ -93,6 +93,7 @@
 		F822EB2C26A25BF400F29E78 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F8AC20D926A4143100117FAE /* Shared */,
 				F822EB3B26A28DE300F29E78 /* AustronautDetailsView */,
 				F822EB2D26A25BF800F29E78 /* AstronautsListView */,
 			);
@@ -102,7 +103,7 @@
 		F822EB2D26A25BF800F29E78 /* AstronautsListView */ = {
 			isa = PBXGroup;
 			children = (
-				F822EB4626A2F53800F29E78 /* AstronautRollView */,
+				F8F932EE26A2559D006957FD /* AstronautRollView.swift */,
 				F8E0D56B26A1B7080015E13D /* AstronautsListView.swift */,
 				F822EB2E26A25D2A00F29E78 /* AstronautsListViewModel.swift */,
 				F8AC20D726A4135100117FAE /* SortingButton.swift */,
@@ -155,21 +156,20 @@
 			path = AustronautDetailsGridView;
 			sourceTree = "<group>";
 		};
-		F822EB4626A2F53800F29E78 /* AstronautRollView */ = {
-			isa = PBXGroup;
-			children = (
-				F822EB3626A2755900F29E78 /* ThumbnailView.swift */,
-				F8F932EE26A2559D006957FD /* AstronautRollView.swift */,
-			);
-			path = AstronautRollView;
-			sourceTree = "<group>";
-		};
 		F86BD3A926A3F846000F744C /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				F86BD3AA26A3F85E000F744C /* AstronaultDetailsViewmodel.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		F8AC20D926A4143100117FAE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F822EB3626A2755900F29E78 /* ThumbnailView.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		F8E0D55D26A1B7080015E13D = {
