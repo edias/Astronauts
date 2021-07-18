@@ -10,7 +10,7 @@ import Foundation
 
 protocol AstronautsFetcher {
     func fetchAstronauts() -> AnyPublisher<[Astronaut], Error>
-    func fetchImage(_ urlString: String) -> AnyPublisher<Data, Error>
+    func fetchAstronautImage(_ urlString: String) -> AnyPublisher<Data, Error>
     func fetchAstronautDetails(_ id: Int) -> AnyPublisher<AstronautDetails, Error>
 }
 
@@ -25,7 +25,7 @@ class AstronautsNetworkServices: BaseNetworkServices, AstronautsFetcher {
         }.eraseToAnyPublisher()
     }
     
-    func fetchImage(_ urlString: String) -> AnyPublisher<Data, Error> {
+    func fetchAstronautImage(_ urlString: String) -> AnyPublisher<Data, Error> {
         get(imageUrlString: urlString)
     }
     

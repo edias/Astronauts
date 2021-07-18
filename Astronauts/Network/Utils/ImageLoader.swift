@@ -24,7 +24,7 @@ class ImageLoader: ObservableObject {
     
     func loadImage(_ urlString: String) {
         
-        cancellable = astronautsFetcher.fetchImage(urlString)
+        cancellable = astronautsFetcher.fetchAstronautImage(urlString)
             .receive(on: DispatchQueue.main)
             .sink { _ in }
             receiveValue: { [weak self] data in
