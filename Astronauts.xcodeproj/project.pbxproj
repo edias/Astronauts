@@ -38,7 +38,7 @@
 		F8E77B5E26A450FB00B88862 /* MockAstronautsNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5D26A450FB00B88862 /* MockAstronautsNetworkServices.swift */; };
 		F8E77B6026A4516800B88862 /* AstronautsNetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B5F26A4516800B88862 /* AstronautsNetworkServicesTests.swift */; };
 		F8E77B6226A457D900B88862 /* AstronautsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B6126A457D900B88862 /* AstronautsListViewModelTests.swift */; };
-		F8E77B6426A45B9000B88862 /* AstronautDetailsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B6326A45B9000B88862 /* AstronautDetailsViewTests.swift */; };
+		F8E77B6426A45B9000B88862 /* AstronautDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B6326A45B9000B88862 /* AstronautDetailsViewModelTests.swift */; };
 		F8E77B6626A4689800B88862 /* ErrorHandlerPublisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E77B6526A4689800B88862 /* ErrorHandlerPublisherTests.swift */; };
 		F8F932E526A1BA75006957FD /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E226A1BA75006957FD /* NetworkServices.swift */; };
 		F8F932E626A1BA75006957FD /* NetworkStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */; };
@@ -94,7 +94,7 @@
 		F8E77B5D26A450FB00B88862 /* MockAstronautsNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAstronautsNetworkServices.swift; sourceTree = "<group>"; };
 		F8E77B5F26A4516800B88862 /* AstronautsNetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsNetworkServicesTests.swift; sourceTree = "<group>"; };
 		F8E77B6126A457D900B88862 /* AstronautsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautsListViewModelTests.swift; sourceTree = "<group>"; };
-		F8E77B6326A45B9000B88862 /* AstronautDetailsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewTests.swift; sourceTree = "<group>"; };
+		F8E77B6326A45B9000B88862 /* AstronautDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		F8E77B6526A4689800B88862 /* ErrorHandlerPublisherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerPublisherTests.swift; sourceTree = "<group>"; };
 		F8F932E226A1BA75006957FD /* NetworkServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		F8F932E326A1BA75006957FD /* NetworkStatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatusHandler.swift; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 				F8E77B5D26A450FB00B88862 /* MockAstronautsNetworkServices.swift */,
 				F8E77B5F26A4516800B88862 /* AstronautsNetworkServicesTests.swift */,
 				F8E77B6126A457D900B88862 /* AstronautsListViewModelTests.swift */,
-				F8E77B6326A45B9000B88862 /* AstronautDetailsViewTests.swift */,
+				F8E77B6326A45B9000B88862 /* AstronautDetailsViewModelTests.swift */,
 				F8E77B6526A4689800B88862 /* ErrorHandlerPublisherTests.swift */,
 			);
 			path = AstronautsTests;
@@ -466,7 +466,7 @@
 				F8E77B6626A4689800B88862 /* ErrorHandlerPublisherTests.swift in Sources */,
 				F8E77B5E26A450FB00B88862 /* MockAstronautsNetworkServices.swift in Sources */,
 				F8E77B5A26A4501C00B88862 /* NetworkStatusHandlerTests.swift in Sources */,
-				F8E77B6426A45B9000B88862 /* AstronautDetailsViewTests.swift in Sources */,
+				F8E77B6426A45B9000B88862 /* AstronautDetailsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
