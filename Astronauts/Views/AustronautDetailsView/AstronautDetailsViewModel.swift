@@ -32,6 +32,7 @@ class AstronautDetailsViewModel: ErrorHandlerPublisher {
         } receiveValue: { [weak self] astronaut in
             self?.astronaut = astronaut.makeDetailsViewModel()
             self?.isAstronautsDetailsLoaded = true
+            self?.errorType = nil
         }.store(in: &subscriptions)
     }
     

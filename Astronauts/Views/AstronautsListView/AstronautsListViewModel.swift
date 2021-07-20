@@ -41,6 +41,7 @@ class AstronautsListViewModel: ErrorHandlerPublisher {
             self?.astronauts = astronauts.map { $0.makeRollDataModel() }.sorted(by: <)
             guard !astronauts.isEmpty else { return }
             self?.isAstronautsLoaded = true
+            self?.errorType = nil
         }.store(in: &susbcriptions)
     }
     
