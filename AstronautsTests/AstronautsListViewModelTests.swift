@@ -83,6 +83,46 @@ class AstronautsListViewModelTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
+    func test_errorIsSetToNilAfterRetrySuccessfully() {
+        
+        mockAstronautsNetworkServices.jsonString = ""
+        
+        let expectation = XCTestExpectation(description: "Error type is set to nil after retry action loads succesfully")
+        
+        let vm = AstronautsListViewModel(mockAstronautsNetworkServices)
+        
+        let stopTrigger = PassthroughSubject<Void, Never>()
+        
+        vm.$errorType.dropFirst().prefix(untilOutputFrom: stopTrigger).sink { errorType in
+            
+            XCTAssertNotNil(errorType)
+            XCTAssertEqual(errorType, ErrorType.generic)
+            
+            self.mockAstronautsNetworkServices.jsonString = """
+            {
+            "results": [{ "id": 1, "name": "John", "nationality": "Canadian","profileImageThumbnail": ""}]
+            }
+            """
+            
+            //  After receiving an error event the error screen is displaying.
+            // Now we stop receiving events from this subscription.
+            stopTrigger.send()
+            
+            // We call this operation once this is what the try again button does
+            vm.loadAstronauts()
+
+        }.store(in: &susbcriptions)
+        
+        vm.$errorType.dropFirst(2).sink { errorType in
+            XCTAssertNil(errorType)
+            expectation.fulfill()
+        }.store(in: &susbcriptions)
+        
+        vm.loadAstronauts()
+        
+        wait(for: [expectation], timeout: 1)
+    }
+    
     func test_astronautsAreFilteredAscendently() {
         
         mockAstronautsNetworkServices.jsonString = """

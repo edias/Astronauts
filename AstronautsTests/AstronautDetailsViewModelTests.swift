@@ -18,17 +18,6 @@ class AstronautDetailsViewModelTests: XCTestCase {
     override func setUp() {
         susbcriptions = Set<AnyCancellable>()
     }
-    
-    struct AstronautDetails: Codable {
-        let id: Int
-        let name: String
-        let status: Status
-        let nationality: String
-        let dateOfBirth: String
-        let bio: String
-        let profileImageThumbnail: String
-        let flights: [Flight]
-    }
         
     func test_astronautDetailsIsLoadedSuccesfully() {
         
@@ -99,6 +88,53 @@ class AstronautDetailsViewModelTests: XCTestCase {
         vm.$errorType.dropFirst().sink { errorType in
             XCTAssertNotNil(errorType)
             XCTAssertEqual(errorType, ErrorType.generic)
+            expectation.fulfill()
+        }.store(in: &susbcriptions)
+        
+        vm.loadAstronautDetails(1)
+        
+        wait(for: [expectation], timeout: 1)
+    }
+    
+    func test_errorIsSetToNilAfterRetrySuccessfully() {
+        
+        mockAstronautsNetworkServices.jsonString = ""
+        
+        let expectation = XCTestExpectation(description: "Error type is set to nil after details are loaded sucessfuly")
+        
+        let vm = AstronautDetailsViewModel(mockAstronautsNetworkServices)
+        
+        let stopTrigger = PassthroughSubject<Void, Never>()
+        
+        vm.$errorType.dropFirst().prefix(untilOutputFrom: stopTrigger).sink { errorType in
+            
+            XCTAssertNotNil(errorType)
+            XCTAssertEqual(errorType, ErrorType.generic)
+            
+            self.mockAstronautsNetworkServices.jsonString = """
+            {
+            "id": 1,
+            "name": "John",
+            "status": {"id": 1, "name": "Retired"},
+            "nationality": "American",
+            "date_of_birth": "10-02-1956",
+            "bio": "",
+            "profile_image_thumbnail": "",
+            "flights": []
+            }
+            """
+            
+            //  After receiving an error event the error screen is displaying.
+            // Now we stop receiving events from this subscription.
+            stopTrigger.send()
+            
+            // We call this operation once this is what the try again button does
+            vm.loadAstronautDetails(1)
+
+        }.store(in: &susbcriptions)
+        
+        vm.$errorType.dropFirst(2).sink { errorType in
+            XCTAssertNil(errorType)
             expectation.fulfill()
         }.store(in: &susbcriptions)
         
